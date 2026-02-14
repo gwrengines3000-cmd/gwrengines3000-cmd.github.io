@@ -19,11 +19,11 @@ const showImages = () => {
 
 showImages()
 
-document.querySelector('#nextbutton').addEventListener('click', event => {
+document.querySelector('#next').addEventListener('click', event => {
     currentImage++
     showImages()
 })
-document.querySelector('#prevbutton').addEventListener('click', event => {
+document.querySelector('#prev').addEventListener('click', event => {
     currentImage--
     showImages()
 })
@@ -31,4 +31,4 @@ document.querySelector('#prevbutton').addEventListener('click', event => {
 setInterval(() => {
     currentImage++
     showImages()
-}, 5000++)
+}, 5000);
