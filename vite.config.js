@@ -5,4 +5,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   base: '/gwrengines3000.github.io/',
+  build: {
+    outDir: 'docs',
+  },
 })
