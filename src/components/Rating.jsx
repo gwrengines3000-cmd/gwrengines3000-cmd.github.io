@@ -1,19 +1,22 @@
-import { FaStar, FaRegStar } from 'react-icons/fa'
+import {useState} from 'react';
+import { FaStar, FaRegStar } from 'react-icons/fa';
 
-const StarRating = ({ rating, color }) => {
+const StarRating = () => {
+    const [initialRating, setInitialRating] = useState(0);
 
-    const [initialRating, setInitialRating] = useState(rating);
-    const displayRating = () => {
-        const stars = [];
-        for (let i = 1; i <= 5; i++) {
-            if (i <= initialRating) {
-                stars.push(<FaStar key={i} />);
-            } else {
-                stars.push(<FaRegStar key={i} />);
+    return (
+        <div className="star-rating">
+            {[...Array(5)].map((_, index) => {
+                const ratingValue = index + 1;
+                return (
+                    <span key={index} onClick={() => setInitialRating(ratingValue)}>
+                        {initialRating >= ratingValue ? <FaStar /> : <FaRegStar />}
+                    </span>
+                );
             }
-        }
-        return stars;
-    }
-}
+        )}
+        </div>
 
-export default StarRating
+    );
+}
+export default StarRating;

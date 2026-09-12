@@ -36,7 +36,7 @@ const App = () => {
             {favoriteBooks.map((book, index) => (
               <li key={index}>
                 <h3>{book}</h3>
-                <Rating rating={Math.floor(Math.random() * 5) + 1} color="#FFD700" />
+                <Rating />
               </li>
             ))}
           </ul>
