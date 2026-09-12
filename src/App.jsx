@@ -1,6 +1,7 @@
 import Header from './components/Header.jsx'
 import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
+import Rating from './components/Rating.jsx'
 
 const sectionStyle = {
   margin: "2rem",
@@ -33,7 +34,10 @@ const App = () => {
           <h2>Favorite Books</h2>
           <ul>
             {favoriteBooks.map((book, index) => (
-              <li key={index}>{book}</li>
+              <li key={index}>
+                <h3>{book}</h3>
+                <Rating rating={Math.floor(Math.random() * 5) + 1} color="#FFD700" />
+              </li>
             ))}
           </ul>
         </section>
