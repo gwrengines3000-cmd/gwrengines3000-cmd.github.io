@@ -2,6 +2,7 @@ import Header from './components/Header.jsx'
 import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
 import Rating from './components/Rating.jsx'
+import MovieList from './components/MovieList.jsx' 
 
 const sectionStyle = {
   margin: "2rem",
@@ -40,6 +41,9 @@ const App = () => {
               </li>
             ))}
           </ul>
+        </section>
+        <section style={sectionStyle}>
+          <MovieList />
         </section>
       </main>
       <Footer />

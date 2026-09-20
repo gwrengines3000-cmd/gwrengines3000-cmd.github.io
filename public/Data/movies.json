@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Top Gun: Maverick",
+        "year": 2022,
+        "genre": "Drama/Action",
+        "director": "Joseph Kosinski",
+        "rating": "PG-13"
+    },
+    {
+        "id": 2,
+        "title": "Iron Man",
+        "year": 2008,
+        "genre": "Action",
+        "director": "Jon Favreau",
+        "rating": "PG-13"
+    },
+    {
+        "id": 3,
+        "title": "Puss In Boots: The Last Wish",
+        "year": 2022,
+        "genre": "Adventure-Comedy",
+        "director": "Joel Crawford",
+        "rating": "PG"
+    },
+    {
+        "id": 4,
+        "title": "The Menu",
+        "year": 2022,
+        "genre": "Dark Comedy-Horror-Thriller",
+        "director": "Mark Mylod",
+        "rating": "R"
+    },
+    {
+        "id": 5,
+        "title": "Superman",
+        "year": 2025,
+        "genre": "Superhero",
+        "director": "James Gunn",
+        "rating": "PG-13"
+    }
+]
