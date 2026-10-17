@@ -3,6 +3,7 @@ import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
 import Rating from './components/Rating.jsx'
 import MovieList from './components/MovieList.jsx' 
+import ThemeToggle from './components/ThemeToggle.jsx'
 
 const sectionStyle = {
   margin: "2rem",
@@ -45,6 +46,10 @@ const App = () => {
         <section style={sectionStyle}>
           <MovieList />
         </section>
+        <section style={sectionStyle}>
+          <ThemeToggle />
+        </section>
+
       </main>
       <Footer />
     </div>
