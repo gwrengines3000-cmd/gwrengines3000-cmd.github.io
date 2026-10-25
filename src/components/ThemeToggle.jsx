@@ -1,27 +1,18 @@
-// light and dark theme toggle component
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import ThemeContext from '../contexts/ThemeContext.jsx';
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(
-    () => localStorage.getItem('isDarkMode') === 'true'
-  );
+  const themeContext = useContext(ThemeContext);
+  if (!themeContext) {
+    throw new Error('ThemeToggle must be used within a ThemeProvider');
+  }
 
-  useEffect(() => {
-    document.body.style.backgroundColor = isDarkMode ? '#333333' : '#ffffff';
-    document.body.style.color = isDarkMode ? '#ffffff' : '#000000';
-  }, [isDarkMode]);
-
-  const toggleTheme = () => {
-    const nextMode = !isDarkMode;
-    setIsDarkMode(nextMode);
-    localStorage.setItem('isDarkMode', String(nextMode));
-  };
+  const { theme, toggleTheme } = themeContext;
 
   return (
     <button onClick={toggleTheme}>
-      Switch to {isDarkMode ? 'Light' : 'Dark'} Mode
+      Switch to {theme === 'dark' ? 'Light' : 'Dark'} Mode
     </button>
-
   );
 };
 
