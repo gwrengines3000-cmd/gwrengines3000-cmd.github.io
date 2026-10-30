@@ -8,6 +8,7 @@ import ThemeProvider from './components/ThemeProvider.jsx'
 import ReducerToggle from './components/ReducerToggle.jsx'
 import {ReducerProvider} from './components/ReducerProvider.jsx'
 import Pokemon from './components/Fetch.jsx' 
+import Modal from './components/Modal.jsx' 
 
 const sectionStyle = {
   margin: "2rem",
@@ -41,6 +42,9 @@ const App = () => {
           </section>
           <section style={sectionStyle}>
             <ReducerToggle />
+          </section>
+          <section style={sectionStyle}>
+            <Modal />
           </section>
         </main>
         <Footer />
