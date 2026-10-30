@@ -6,13 +6,15 @@ import MovieList from './components/MovieList.jsx'
 import ThemeToggle from './components/ThemeToggle.jsx'
 import ThemeProvider from './components/ThemeProvider.jsx'
 import ReducerToggle from './components/ReducerToggle.jsx'
-import { ReducerProvider } from './components/ReducerProvider.jsx'
+import {ReducerProvider} from './components/ReducerProvider.jsx'
+import Pokemon from './components/Fetch.jsx' 
 
 const sectionStyle = {
   margin: "2rem",
   padding: "1rem",
   borderRadius: "8px",
   maxWidth: "600px",
+  backgroundColor: "#f0f0f0",
   marginLeft: "auto",
   marginRight: "auto",
   textAlign: "center",
@@ -30,6 +32,9 @@ const App = () => {
           <Sections />
           <section style={sectionStyle}>
             <MovieList />
+          </section>
+          <section style={sectionStyle}>
+            <Pokemon />
           </section>
           <section style={sectionStyle}>
             <ThemeToggle />
